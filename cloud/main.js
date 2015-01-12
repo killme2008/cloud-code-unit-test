@@ -85,3 +85,8 @@ AV.Cloud.afterDelete("Album", function(request) {
     }
   });
 });
+
+AV.Cloud.onVerify('sms', function(req, res){
+   console.log(req.object);
+   res.success('ok');
+});
